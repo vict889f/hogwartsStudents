@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hogwurdz Sorting</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="hogwarts_students.css" />
+  </head>
+
+  <body>
+    <template>
+      <article class="students">
+        <!-- <img class="image" src="" alt="" /> -->
+        <h2 class="fullname"></h2>
+        <p class="house"></p>
+        <p data-field="prefect"></p>
+        <!-- <button class="inq">Inquisitional Squard</button> -->
+
+        <!-- <p class=""></p> -->
+      </article>
+    </template>
+
+    <div id="popup" data-theme="">
+      <section class="indhold">
+        <article class="singleStudent">
+          <button class="luk">X</button>
+          <div class="imgBox"><img alt="student image" class="image" /></div>
+          <div class="crest"></div>
+          <h2></h2>
+          <p class="nickname"></p>
+          <p class="house"></p>
+          <p class="gender"></p>
+          <p class="bloodType"></p>
+          <button class="expel">Expel</button>
+          <p class="prefect" data-field="prefect"></p>
+        </article>
+      </section>
+    </div>
+
+    <h1>Hogwurdz students</h1>
+
+    <p>
+      Filtering:
+      <button class="filter valgt" data-action="filter" data-filter="*">All</button>
+      <button class="filter" data-action="filter" data-filter="Gryffindor">Gryffindor</button>
+      <button class="filter" data-action="filter" data-filter="Hufflepuff">Hufflepuff</button>
+      <button class="filter" data-action="filter" data-filter="Ravenclaw">Ravenclaw</button>
+      <button class="filter" data-action="filter" data-filter="Slytherin">Slytherin</button>
+      <button class="filter" data-action="filter" data-filter="Expelled">Expelled Students</button>
+    </p>
+    <p id="sorting">
+      Sorting:
+      <!-- <button class="sort valgt" data-action="sort" data-sort-direction="asc" data-sort="*">All</button> -->
+      <button class="sort" data-action="sort" data-sort-direction="asc" data-sort="firstName">First Name</button>
+      <button class="sort" data-action="sort" data-sort-direction="asc" data-sort="lastName">Last Name</button>
+      <button class="sort" data-action="sort" data-sort-direction="asc" data-sort="house">House</button>
+      <button class="sort" data-action="sort" data-sort-direction="asc" data-sort="gender">Gender</button>
+    </p>
+    <br />
+
+    <p>Search <input id="search" type="text" placeholder="Search for names.." /></p>
+
+    <p class="numerOfStudents"></p>
+
+    <!-- <label id="sorting_options">
+      Sorting:
+      <select name="theme" id="sorting">
+        <option data-action="sort" data-sort-direction="asc" data-sort="*">All</option>
+        <option data-action="sort" data-sort-direction="asc" data-sort="firstName" value="firstName">First name: A-Z</option>
+        <option data-action="sort" data-sort-direction="asc" data-sort="lastname" value="lastname">Last name: A-Z</option>
+        <option data-action="sort" data-sort-direction="asc" data-sort="house" value="house">House</option>
+        <option data-action="sort" data-sort-direction="asc" data-sort="gender" value="gender">Gender</option>
+      </select>
+    </label> -->
+
+    <h3>all</h3>
+
+    <section id="liste"></section>
+
+    <script src="hogwarts_students.js"></script>
+  </body>
+</html>

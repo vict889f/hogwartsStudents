@@ -1,0 +1,175 @@
+img {
+  display: none;
+  width: 100%;
+}
+
+/* body {
+  background-image: url(assets/dont_touch-1.jpg);
+} */
+
+.imgBox {
+  width: 180px;
+  height: 180px;
+  float: right;
+}
+
+:root {
+  --primary-color: white;
+  --secondary-color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+#knapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 20px 40px 20px 40px;
+}
+
+/* button {
+  border-radius: 5%;
+} */
+
+.valgt {
+  background-color: #3e71da;
+  color: white;
+  border-radius: 0%;
+}
+
+#liste {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(1, 1fr);
+  /*            max-width: 200px;*/
+  padding: 0vw 5vw 5vw 5vw;
+}
+
+.students {
+  border: solid black 1px;
+  padding: 2vw;
+  flex-direction: column;
+  height: 150px;
+}
+
+.fullname {
+  cursor: pointer;
+}
+
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.83);
+  /* background-color: var(--secondary-color); */
+  display: none;
+}
+
+.indhold {
+  width: 50vw;
+  /* height: 50vw; */
+  margin: 4rem auto;
+  padding: 10px;
+  /* background: black; */
+}
+
+[data-action] {
+  cursor: pointer;
+}
+
+[data-theme="Gryffindor"] {
+  --primary-color: #660000;
+  --secondary-color: #e09c0a;
+  --house-crest: url(assets/gryffindor-emblem.png);
+}
+[data-theme="Hufflepuff"] {
+  --primary-color: #ff9e0c;
+  --secondary-color: #1f1e19;
+  --house-crest: url(assets/hufflepuff-emblem.png);
+}
+[data-theme="Ravenclaw"] {
+  --primary-color: #193956;
+  --secondary-color: #8e501e;
+  --house-crest: url(assets/ravenclaw-emblem.png);
+}
+[data-theme="Slytherin"] {
+  --primary-color: #30751c;
+  --secondary-color: #cccccc;
+  --house-crest: url(assets/slytherin-emblem.png);
+}
+
+#sorting [data-sort-direction="asc"][data-action="sorted"]:after {
+  content: "↓";
+}
+
+#sorting [data-sort-direction="desc"][data-action="sorted"]:after {
+  content: "↑";
+}
+
+.singleStudent {
+  background-color: var(--primary-color);
+
+  padding: 20px;
+}
+
+.crest {
+  width: 100px;
+  height: 100px;
+  margin-left: 30px;
+  background-size: 100%;
+  background-image: var(--house-crest);
+}
+
+.luk {
+  position: fixed;
+  /* right: 0; */
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 15%;
+}
+
+/****** prefects ******/
+[data-field="prefect"] {
+  font-size: 4 0px;
+  width: 70px;
+
+  cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  #liste {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  img {
+    display: block;
+    /* width: 150px;
+    height: 150px; */
+    width: 100%;
+    float: right;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #liste {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  img {
+    display: block;
+    /* width: 150px;
+    height: 150px; */
+    width: 100%;
+    float: right;
+    object-fit: cover;
+  }
+}
